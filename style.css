@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body{
+    background: linear-gradient(270deg, #ff6f61, #ffeb3b, #ff6f61);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+.box{
+    width: 90%;
+    max-width: 30rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.header{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    animation: colorChange 3s infinite;
+    transition: transform 0.3s;
+}
+.header:hover {
+    transform: scale(1.1);
+}
+.name-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.name{
+    margin-bottom: 2rem;
+}
+.Name{
+    border: 2px solid rgb(246, 92, 118);
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    width: calc(100% - 1rem);
+    margin: 0.5rem 0;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 1rem;
+}
+input.Name:focus {
+    border-color: rgb(255, 105, 180);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+input.Name:hover {
+    border-color: rgb(255, 105, 180);
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+button{
+    background: linear-gradient(90deg, rgb(246, 92, 118), rgb(255, 105, 180));
+    border: none;
+    padding: 0.7rem 2.5rem;
+    text-align: center;
+    font-weight: 800;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 1rem;
+}
+button:hover {
+    background: rgb(255, 105, 180);
+    transform: translateY(-3px);
+}
+.loveValue{
+    height: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Start slightly above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+@keyframes celebrate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes colorChange {
+    0% {
+        color: #ff6f61; /* Initial color */
+    }
+    25% {
+        color: #ffeb3b; /* Change to yellow */
+    }
+    50% {
+        color: #ff6f61; /* Back to initial color */
+    }
+    75% {
+        color: #ff1050; /* Change to a brighter pink */
+    }
+    100% {
+        color: #ff6f61; /* Back to initial color */
+    }
+}
+#footer {
+    margin-top: 2rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    text-align: center;
+    font-weight: bolder;
+    color: #ffffff;
+    background-color: rgba(255, 105, 180, 0.8);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease;
+}
+#footer.celebrate {
+    animation: celebrate 0.5s ease;
+}
+#footer p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+}
+#footer p:hover {
+    color: #ffeb3b;
+    transition: color 0.3s;
+}
+@media (max-width:768px)
+{
+    .header {
+        font-size: 2rem;
+    }
+
+    input.Name {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    .loveValue {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width:480px)
+{
+    .header {
+        font-size: 1.8rem;
+    }
+
+    input.Name {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+
+    .loveValue {
+        font-size: 1rem;
+    }
+}
