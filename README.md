@@ -2,13 +2,13 @@
 
 A fun project to calculate your love percentage! Enter two names and see how compatible you are. 
 
+## Preview
+[Live Demo](https://shekhfaisal2110.github.io/LoveCalculater/)
+
 ## Features
 - Random love compatibility calculation.
 - Beautiful UI with animations and gradient effects.
 - Celebratory confetti for high compatibility.
-
-## Preview
-[Live Demo](https://shekhfaisal2110.github.io/LoveCalculater/)
 
 ## How to Use
 1. Enter your name.
